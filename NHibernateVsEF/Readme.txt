@@ -1,0 +1,1 @@
+This tracer created to compare NHibernate and Entity framework. I used Entity Framework CTP5 and Fluent NHibernate (use latest one) for the testing. You can download the dlls, not included in this repository.
