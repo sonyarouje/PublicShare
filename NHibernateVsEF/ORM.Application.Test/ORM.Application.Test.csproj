@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2FD69AF-E792-48A5-B6D4-CFBE03C63F1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ORM.Application.Test</RootNamespace>
+    <AssemblyName>ORM.Application.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\Lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.2.0.712, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\Lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\Lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq">
+      <HintPath>..\Lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorServiceTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ORM.Application\ORM.Application.csproj">
+      <Project>{58E3101A-07FA-425A-9AAE-7456F5DD9D8A}</Project>
+      <Name>ORM.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ORM.Ioc\ORM.Ioc.csproj">
+      <Project>{D5AA4C62-0C22-4403-B15D-D5818EE7DA99}</Project>
+      <Name>ORM.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ORM.Persistance.DomainMapping\ORM.Persistance.DomainMapping.csproj">
+      <Project>{EB1B3479-BD1C-4BB9-A16C-39D48750EA06}</Project>
+      <Name>ORM.Persistance.DomainMapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ORM.Persistance\ORM.Persistance.csproj">
+      <Project>{AF198630-259C-4253-AC8E-37C8EE560689}</Project>
+      <Name>ORM.Persistance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ORMComparer.Domain\ORM.Domain.csproj">
+      <Project>{DDE6FEFF-6756-4386-B591-C0849E51D8EA}</Project>
+      <Name>ORM.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

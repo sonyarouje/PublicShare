@@ -1,0 +1,14 @@
+﻿<configuration>
+  <properties>
+    <connection_string>Data Source=PROLAPE00700\SQLSERVER;Initial Catalog=pubs;Persist Security Info=True;User ID=sony;pwd=sony</connection_string>
+  </properties>
+  <components>
+    <component id="repository"
+            service="ORM.Persistance.Interface.IRepository, ORM.Persistance"
+            type="ORM.Persistance.HibernateRepo, ORM.Persistance">
+      <parameters>
+        <connectionString>#{connection_string}</connectionString>
+      </parameters>
+    </component>
+  </components>
+</configuration>
